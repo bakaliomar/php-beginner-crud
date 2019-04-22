@@ -27,7 +27,7 @@
             try{
 
                 // insert query
-                $query = "INSERT INTO products SET name=:name, description=:description, price=:price, created=:created";
+                $query = "INSERT INTO products(name,description,price,created) values (:name,:description,:price,:created);";
 
                 // prepare query for execution
                 $stmt = $con->prepare($query);

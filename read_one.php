@@ -29,11 +29,11 @@
     // read current record's data
     try {
         // prepare select query
-        $query = "SELECT id, name, description, price FROM products WHERE id = ? LIMIT 0,1";
+        $query = "SELECT id, name, description, price FROM products WHERE id = :id";
         $stmt = $con->prepare( $query );
 
         // this is the first question mark
-        $stmt->bindParam(1, $id);
+        $stmt->bindParam(":id", $id);
 
         // execute our query
         $stmt->execute();

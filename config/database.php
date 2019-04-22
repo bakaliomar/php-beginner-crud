@@ -1,11 +1,11 @@
 <?php
 //used to connect database
-$host ="localhost";
-$db_name = "phpCrud1";
-$username = "root";
+$host ="127.0.0.1";
+$db_name = "crud";
+$username = "postgres";
 $password = "1234";
 try{
-    $con=new PDO("mysql:host={$host};dbname={$db_name}",$username,$password);
+    $con=new PDO("pgsql:host={$host};dbname={$db_name}",$username,$password);
 
 }
 // show error
